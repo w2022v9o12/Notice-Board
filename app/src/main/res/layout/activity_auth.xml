@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AuthActivity"
+        android:background="@color/main_color">
+
+        <ImageView
+            android:id="@+id/auth_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/auth_image"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/auth_email"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:hint="이메일"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/auth_image"
+            style="@style/WhiteStroke"/>
+
+        <EditText
+            android:id="@+id/auth_password"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:hint="비밀번호 (6자리 이상)"
+            android:inputType="textPassword"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/auth_email"
+            style="@style/WhiteStroke"/>
+
+        <TextView
+            android:id="@+id/sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원가입"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="@id/auth_password"
+            app:layout_constraintTop_toBottomOf="@id/auth_password" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:text="로그인"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_up"
+            style="@style/WhiteRadius"/>
+
+        <Button
+            android:id="@+id/login_anonymous"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:text="비회원 로그인"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login"
+            style="@style/WhiteRadius"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

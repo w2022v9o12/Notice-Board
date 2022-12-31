@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/NBFragment">
+
+    <fragment
+        android:id="@+id/NBFragment"
+        android:name="w2022v9o12.noticeboard.mainfragment.NBFragment"
+        android:label="fragment_n_b"
+        tools:layout="@layout/fragment_n_b" >
+        <action
+            android:id="@+id/action_NBFragment_to_userInfoFragment"
+            app:destination="@id/userInfoFragment" />
+        <action
+            android:id="@+id/action_NBFragment_to_bookmarkFragment"
+            app:destination="@id/bookmarkFragment" />
+        <action
+            android:id="@+id/action_NBFragment_to_noticeFragment"
+            app:destination="@id/noticeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userInfoFragment"
+        android:name="w2022v9o12.noticeboard.mainfragment.UserInfoFragment"
+        android:label="fragment_user_info"
+        tools:layout="@layout/fragment_user_info" >
+        <action
+            android:id="@+id/action_userInfoFragment_to_NBFragment"
+            app:destination="@id/NBFragment" />
+        <action
+            android:id="@+id/action_userInfoFragment_to_bookmarkFragment"
+            app:destination="@id/bookmarkFragment" />
+        <action
+            android:id="@+id/action_userInfoFragment_to_noticeFragment"
+            app:destination="@id/noticeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookmarkFragment"
+        android:name="w2022v9o12.noticeboard.mainfragment.BookmarkFragment"
+        android:label="fragment_bookmark"
+        tools:layout="@layout/fragment_bookmark" >
+        <action
+            android:id="@+id/action_bookmarkFragment_to_userInfoFragment"
+            app:destination="@id/userInfoFragment" />
+        <action
+            android:id="@+id/action_bookmarkFragment_to_NBFragment"
+            app:destination="@id/NBFragment" />
+        <action
+            android:id="@+id/action_bookmarkFragment_to_noticeFragment"
+            app:destination="@id/noticeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/noticeFragment"
+        android:name="w2022v9o12.noticeboard.mainfragment.NoticeFragment"
+        android:label="fragment_notice"
+        tools:layout="@layout/fragment_notice" >
+        <action
+            android:id="@+id/action_noticeFragment_to_userInfoFragment"
+            app:destination="@id/userInfoFragment" />
+        <action
+            android:id="@+id/action_noticeFragment_to_NBFragment"
+            app:destination="@id/NBFragment" />
+        <action
+            android:id="@+id/action_noticeFragment_to_bookmarkFragment"
+            app:destination="@id/bookmarkFragment" />
+    </fragment>
+
+</navigation>
